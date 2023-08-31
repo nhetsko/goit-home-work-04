@@ -76,8 +76,8 @@ background-color:#FFFFFF;
 }
 .main-header {
     
-    border-bottom: 1px solid var(--cornflower, #E7E9FC);
-}
+    border-bottom: 1px solid var(--cornflower, #E7E9FC);}
+   
 .logotype {color: var(--iris, #4D5AE5);
 font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -111,6 +111,18 @@ font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     letter-spacing: 0.02em;
  
+}
+.menu-link:hover:after {
+    display: block;
+    content: "";
+    width: 48px;
+        height: 4px;
+        border-radius: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 0;
+            background-color: var(--ocean, #404BBF);
 }
 .menu-link:last-child {
     margin-right: 0;
@@ -190,7 +202,15 @@ border-radius: 4px;
 .section-one {
     background-color:var(--navyblue, #2E2F42);
 padding: 188px 0;
-
+background-image: linear-gradient( 
+    to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+),
+ url(/images/background.png);
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /*Section 2*/
@@ -215,6 +235,17 @@ line-height: 1.2;
 letter-spacing: 0.02em;
 margin-bottom: 8px;
         
+}
+           
+.icon-box {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 264px;
+height: 112px;
+border-radius: 4px;
+border: 1px solid var(--lightslate, #8E8F99);
+background: var(--cloud, #F4F4FD);
 }
 .section-two {
 
@@ -265,10 +296,7 @@ padding: 120px 0;
 
     }
 /*Section 3*/
- .container-section-three {
-    
-    
- }
+ 
 .section-three {
 background: var(--cloud, #F4F4FD);
 padding: 120px 0;
@@ -319,10 +347,24 @@ font-family: 'Roboto', sans-serif;
     letter-spacing: 0.02em;
    
 }
-.images-three {
-
+.team-icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
-
+.team-icon-link {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          background-color: #4d5ae5;
+}
+.team-icon-link:hover {
+    background-color:#31D0AA;;
+}
  /*Section-4*/
 .container-section-four {
     width: 1158px;
@@ -348,11 +390,34 @@ padding: 120px 0 120px 0;
     width: calc(( 100% - 48px)/ 3 );
    
 }
-.images-four {
-   
-        
-       
+.overlay-box{
+    position: relative;
+    overflow: hidden;
 }
+.overlay {
+color: #F4F4FD;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+text-align: justify;
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #4D5AE5;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-four-item:hover .overlay{
+transform: translateY(0);
+}
+
 .title-3-paragraf {
 padding: 32px 16px;
 border: 1px solid #e7e9fc;
@@ -366,26 +431,30 @@ border-top: none;
     width: 1158px;
     
 }
-.footer-main {
-   
-    
+.footer-main { 
     background: var(--navyblue, #2E2F42);
     padding: 100px 0;
+    display: flex;
+    justify-content: center;
+   
+    
 }
+
 .footer-logotype {
 color:var(--cloud, #F4F4FD);  
 }
+
 .logotype-footer {
-    color: var(--iris, #4D5AE5);
+color: var(--iris, #4D5AE5);
 font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.17;
-        /* 116.667% */
-        letter-spacing: 0.03em;
-        text-transform: uppercase; 
-        display: flex;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.17;
+/* 116.667% */
+letter-spacing: 0.03em;
+text-transform: uppercase; 
+display: flex;
 
     }
 
@@ -402,3 +471,16 @@ color: var(--cloud, #F4F4FD);
     max-width: 264px;
         }
         
+.social-media {
+    color: var(--WHITE, #FFF);
+    
+        /* Body Medium */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5em;
+        /* 150% */
+        letter-spacing: 0.02em;
+       
+}
