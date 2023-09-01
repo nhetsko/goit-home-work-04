@@ -530,9 +530,6 @@ color: var(--cloud, #F4F4FD);
 .footer-icon-item {
 width: 40px;
 height: 40px;
-transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-link {
 width: 100%;
@@ -542,6 +539,9 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-link:hover, .footer-icon-link:focus {
     background-color: #31d0aa;
