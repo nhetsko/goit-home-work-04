@@ -75,7 +75,9 @@ background-color:#FFFFFF;
 
 }
 .main-header {
-    
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     border-bottom: 1px solid var(--cornflower, #E7E9FC);}
    
 .logotype {color: var(--iris, #4D5AE5);
@@ -110,20 +112,29 @@ font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+        position: relative;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  
 }
-.menu-link:hover:after {
-    display: block;
+.current {
+color: #404bbf;
+
+}
+.current::after {
     content: "";
-    width: 48px;
+        width: 48px;
         height: 4px;
         border-radius: 2px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 0;
-            background-color: var(--ocean, #404BBF);
-}
+        background: #404BBF;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+    }
+    
+
 .menu-link:last-child {
     margin-right: 0;
 }
@@ -155,7 +166,10 @@ font-style: normal;
         font-weight: 400;
         line-height: 1.5;
         letter-spacing: 0.02em;
-    }
+        transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
 .address-link:focus, .address-link:hover {display: flex;
     color:#404BBF;}
@@ -194,12 +208,18 @@ display: block;
 height: 56px;
 border: none;
 border-radius: 4px;
+transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus {
  background: var(--ocean, #404BBF);}
 .section-one {
+    margin-right: auto;
+        margin-left: auto;
+    max-width: 1440px;
     background-color:var(--navyblue, #2E2F42);
 padding: 188px 0;
 background-image: linear-gradient( 
@@ -207,7 +227,7 @@ background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
 ),
- url(/images/background.png);
+ url(/images/background.jpg);
 background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -246,6 +266,7 @@ height: 112px;
 border-radius: 4px;
 border: 1px solid var(--lightslate, #8E8F99);
 background: var(--cloud, #F4F4FD);
+margin-bottom: 8px;
 }
 .section-two {
 
@@ -312,7 +333,9 @@ gap: 24px;
 background: var(--white, #FFF);
 border-radius: 0px 0px 4px 4px;
 width: calc((100% - 72px)/ 4);
-
+box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .title-paragraf {
@@ -361,9 +384,16 @@ font-family: 'Roboto', sans-serif;
             height: 40px;
             border-radius: 50%;
           background-color: #4d5ae5;
+        transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+.team-icon-link:hover, .team-icon-link:focus {
+    background-color:#404bbf;
 }
-.team-icon-link:hover {
-    background-color:#31D0AA;;
+.team-icon-svg{
+    fill: #f4f4fd;
 }
  /*Section-4*/
 .container-section-four {
@@ -388,6 +418,9 @@ padding: 120px 0 120px 0;
 }
 .section-four-item {
     width: calc(( 100% - 48px)/ 3 );
+    transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .overlay-box{
@@ -400,6 +433,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 text-align: justify;
+padding: 40px 32px;
 position: absolute;
     top: 0;
     left: 0;
@@ -416,6 +450,7 @@ position: absolute;
 }
 .section-four-item:hover .overlay{
 transform: translateY(0);
+
 }
 
 .title-3-paragraf {
@@ -429,17 +464,16 @@ border-top: none;
 /*Footer*/
 .container-footer {
     width: 1158px;
-    
+    display: flex;
+    align-items: baseline;
 }
 .footer-main { 
     background: var(--navyblue, #2E2F42);
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-   
-    
+    padding: 100px 0;   
 }
-
+.footer-one {
+    margin-right: 120px;
+}
 .footer-logotype {
 color:var(--cloud, #F4F4FD);  
 }
@@ -482,5 +516,5 @@ color: var(--cloud, #F4F4FD);
         line-height: 1.5em;
         /* 150% */
         letter-spacing: 0.02em;
-       
+    margin-bottom: 16px;
 }
