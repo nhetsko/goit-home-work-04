@@ -227,7 +227,7 @@ background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
 ),
- url(/images/background.jpg);
+ url(../images/background.jpg);
 background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -494,7 +494,7 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase; 
 display: flex;
-
+margin-bottom: 17px;
     }
 
 .footer-text {
@@ -508,6 +508,7 @@ color: var(--cloud, #F4F4FD);
     /* 150% */
     letter-spacing: 0.02em;
     max-width: 264px;
+    
         }
         
 .social-media {
